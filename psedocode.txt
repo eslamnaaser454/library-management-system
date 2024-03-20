@@ -1,0 +1,131 @@
+Define a class called Stack
+    Define a method push that 
+        If top is less than MAX_SIZE-1
+           increse top by 1
+           Assign the element to the top of the array
+        Else
+           Display Stack is full
+
+
+    Define a method isEmpty that 
+      If top is less than 0
+         returns true
+      Else
+         returns false
+
+
+    Define a method pop
+        If isEmpty returns true
+            Display Stack is empty
+        Else
+            Decrese top by 1
+
+
+    Define a method getTop
+        If isEmpty returns true
+            Display "Stack is empty" and return -1
+        Else
+            Return to the top of the array 
+
+
+    Define a method print
+        Display "[" followed by elements of arr separated by ',' and "]" at the end
+
+
+    Define a class called Queue
+       Define a method isEmpty that 
+         If both front and rear are -1
+           returns true
+         Else
+           returns false
+
+
+    Define a method enqueue that
+        If rear does't equal MAX_SIZE - 1 then
+        
+            If isEmpty returns true
+                Increse rear and front by 1
+            Else
+                Increment rear by 1
+                Assign the element to the end of the array
+            
+        Else
+            Display Queue Full
+
+
+    Define a method dequeue
+        If not isEmpty and front is less than or equal to rear
+           Store the element at the front
+           Increse front by 1
+           Return to item
+        Else
+           Display Queue Is Empty 
+
+
+    Define a method peek
+        If not isEmpty and front is less than or equal to rear
+          Return to the front of array
+        Else
+          Display Queue Is Empty 
+
+
+    Define a method display
+        If not isEmpty and front is less than or equal to rear
+            Display elements of the array from front to rear
+        Else
+            Display Queue Is Empty
+
+
+    Define a class called Book
+       Define a constructor that takes id, title, author, and numCopies as inputs and assigns them to respective variables
+
+Define a class called LibraryManagementSystem
+    Initialize instances of Stack, Queue, and a vector of Books
+
+    Define a method addBook
+        Take user input for id, title, author, and numCopies
+        Validate id and numCopies 
+        Create new Book object with the inputs 
+        add it to the vector
+
+    Define a method displayAvailableBooks
+       Iterate through the vector of Books 
+        If the number of copyes is less than 0
+            Display No books available
+        Else 
+            display details of available books
+
+    Define a method borrowBook
+      Take user input for the book id to borrow
+       If the book is available 
+          decrese its numCopies
+       Else 
+          Desplay No books available to borrow.
+
+    Define a method returnBook
+        If any book has been borrowed
+          If the user choose 1 to return the last borrowed book 
+            pop it from the stack and increse its numCopies
+            
+          If the user choose 2 to return a specific book
+            increse its numCopies
+            
+        Else 
+          display No books have been borrowed yet
+
+    Define a method reserveBook
+        Take user input for the book id to reserve a book
+        Check if the book is available, if not, add it to the reservation queue
+
+    Define a method processReservedBooks
+        Check if there are reserved books in the queue
+         If the reserved book is available
+           assign it to the next person in the queue
+
+    Define a method displayReservedBooks
+        Display the reserved books in the queue using  reservationQueue object from the Queue method
+
+
+Define a main function
+    Initialize an instance of LibraryManagementSystem
+    Display a menu to the user and perform actions based on their choice until they choose to exit
